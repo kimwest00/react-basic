@@ -16,6 +16,9 @@
 		let counter = 0;
 		function countUp(){
 			counter = counter +1;
+			render();
+		}
+		function render(){
 			ReactDOM.render(<Container/>,root);
 		}
 		const root = document.getElementById("root");
@@ -27,6 +30,6 @@
 		);
 		//최초 render할때 counter 변수의 값을 가져오기때문에
 		//화면에 반영되지않음
-		ReactDOM.render(<Container/>,root);
+		render();
 	</script>
 </html>
