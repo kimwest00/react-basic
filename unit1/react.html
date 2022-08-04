@@ -14,11 +14,14 @@
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script type = "text/babel">
 		let counter = 0;
+		function countUp(){
+			counter = counter +1;
+		}
 		const root = document.getElementById("root");
 		const Container = () =>(
 		<div>
 			<h3>Total clicks :{counter}</h3>
-			<button>Click me</button>
+			<button onClick ={countUp}>Click me</button>
 		</div> 
 		);
 		ReactDOM.render(<Container/>,root)
