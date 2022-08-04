@@ -15,10 +15,13 @@
 	<script type = "text/babel">
 		const root = document.getElementById("root");
 		function App() { 
-			const data = React.useState();
+			const [counter,modifier] = React.useState(0);
+			const onClick = () =>{
+				counter = counter+1;
+			}
 			<div>
-				<h3>Total clicks :0</h3>
-				<button>Click me</button>
+				<h3>Total clicks :{data[0]}</h3>
+				<button onClick ={onClick}>Click me</button>
 			</div> 
 		}
 		render();
