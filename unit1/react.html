@@ -13,17 +13,11 @@
 	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 	<script>
 		const root = document.getElementById("root");
-		const h3= React.createElement("h3",
-        {
-            id:"title",
-            onMouseEnter: () => console.log("mouse enter"),
-        },
-        "Hello I'm word");
-		const btn = React.createElement("button",{
-				onClick : () => console.log("I'm clicked")
-			},
-"Click me");
-		const container = React.createElement("div",null,[h3,btn]);	
+		const Title = <h3 id = "title" onMouseEnter={() => console.log("mouse enter")}>
+			Hello I'm word
+		</h3>
+		const Button = <button onClick ={() => console.log("I'm clicked")}>Click me</button>
+		const container = React.createElement("div",null,[Title,btn]);	
 		ReactDOM.render(container,root)
 	</script>
 </html>
