@@ -19,11 +19,13 @@
 			const onClick = () =>{
 				counter = counter+1;
 			}
+			return(
 			<div>
 				<h3>Total clicks :{data[0]}</h3>
 				<button onClick ={onClick}>Click me</button>
 			</div> 
+			);
 		}
-		render();
+		ReactDOM.render(<App/>,root);
 	</script>
 </html>
