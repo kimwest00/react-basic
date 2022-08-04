@@ -19,11 +19,15 @@
 			Hello I'm word
 			</h3>
 		);
-		const Button = ()=>(
+		const Button = () => (
 			<button style = {{backgroundColor : "tomato"}} 
 			onClick ={() => console.log("I'm clicked")}>Click me</button>
 		);
-		const Container = <div><Title/><Button/></div> 
+		const Container = 
+		<div>
+			<Title/>
+			<Button/>
+		</div> 
 		ReactDOM.render(Container,root)
 	</script>
 </html>
