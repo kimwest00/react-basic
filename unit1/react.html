@@ -14,20 +14,12 @@
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script type = "text/babel">
 		const root = document.getElementById("root");
-		const Title = () => (
-			<h3 id = "title" onMouseEnter={() => console.log("mouse enter")}>
-			Hello I'm word
-			</h3>
-		);
-		const Button = () => (
-			<button style = {{backgroundColor : "tomato"}} 
-			onClick ={() => console.log("I'm clicked")}>Click me</button>
-		);
-		const Container = 
+		const Container = () =>(
 		<div>
-			<Title/>
-			<Button/>
+			<h3>Total clicks:0</h3>
+			<button>Click me</button>
 		</div> 
-		ReactDOM.render(Container,root)
+		);
+		ReactDOM.render(<Container/>,root)
 	</script>
 </html>
