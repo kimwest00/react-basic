@@ -23,14 +23,21 @@
 				<h1 className ="hi">Super Converter</h1>
                 <label htmlFor ="minutes">Minutes</label>
                 <input 
-                value = {minutes}
-                id = "minutes" 
-                placeholder = "Minutes"
-                type= "number"
-                onChange = {onChange} />
+                    value = {minutes}
+                    id = "minutes" 
+                    placeholder = "Minutes"
+                    type= "number"
+                    onChange = {onChange} 
+                />
                 <h4>You want to convert {minutes}</h4>
                 <label htmlFor ="hours" >Hours</label>
-                <input id = "hours" placeholder = "Hours" type= "number"/>
+                <input 
+                    value = {minutes/60}
+                    id = "hours"
+                    placeholder = "Hours" 
+                    type= "number"
+                    />
+                    
 			</div>
 			);
         }
