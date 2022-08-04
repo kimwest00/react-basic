@@ -17,7 +17,7 @@
 		const Title = <h3 id = "title" onMouseEnter={() => console.log("mouse enter")}>
 			Hello I'm word
 		</h3>
-		const Button = <button onClick ={() => console.log("I'm clicked")}>Click me</button>
+		const Button = <button style = {{backgroundColor : "tomato"}} onClick ={() => console.log("I'm clicked")}>Click me</button>
 		const container = React.createElement("div",null,[Title,Button]);	
 		ReactDOM.render(container,root)
 	</script>
