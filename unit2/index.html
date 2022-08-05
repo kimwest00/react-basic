@@ -59,10 +59,14 @@
         }
         function App(){
             const [index,setIndex] = React.useState(0);
+            const onSelect = (event) =>{
+                console.log(event.target.value);
+            }
+
             return(
 			<div>
 				<h1>Super Converter</h1>
-                <select>
+                <select onChange = {onSelect}>
                     <option value = '0'>Minutes & Hours</option>
                     <option value = '1'>Km & Miles</option>
                 </select>
