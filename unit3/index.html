@@ -24,9 +24,11 @@
         }
        
         function App(){
+            const [value,setValue] = React.useState("Save Changes");
+            const changeValue = ()=>setValue("Revert Change");
             return(
 			<div>
-                <Btn text ="Save Change"/>
+                <Btn text ={value} onClick ={changeValue}/>
                 <Btn text ="Continue"/>
             </div>
 			);
