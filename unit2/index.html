@@ -15,17 +15,14 @@
 	<script type = "text/babel">
         function App(){
             const [minutes,setMinutes] = React.useState();
-            const [flipped,setFlipped] = React.useState();
+            const [flipped,setFlipped] = React.useState(false);
 
-            const onChange = () => {
+            const onChange = (event) => {
                 setMinutes(event.target.value);
             }
-            const reset = () =>{
-                setMinutes(0);
-            }
-            const onFlipped = () =>{
-                setFlipped(!flipped);
-            }
+            const reset = () => setMinutes(0);
+            
+            const onFlipped = () => setFlipped((current)=>!current);
             return(
 			<div>
 				<h1 className ="hi">Super Converter</h1>
