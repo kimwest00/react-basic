@@ -58,11 +58,14 @@
 			);
         }
         function App(){
+            const [index,setIndex] = React.useState(0);
             return(
 			<div>
 				<h1>Super Converter</h1>
-                <MinutesToHours />
-                <KmToMiles />
+                <select>
+                    <option value = '0'>Minutes & Hours</option>
+                    <option value = '1'>Km & Miles</option>
+                </select>
 			</div>
 			);
         }
