@@ -33,13 +33,14 @@
                         id = "minutes" 
                         placeholder = "Minutes"
                         type= "number"
-                        onChange = {onChange} 
+                        onChange = {onChange}
+                        disabled = {flipped === true} 
                     />
                 </div>
                 <div>
                     <label htmlFor ="hours" >Hours</label>
                     <input 
-                        value = {minutes/60}
+                        value = {Math.round(minutes/60)}
                         id = "hours"
                         placeholder = "Hours" 
                         type= "number"
