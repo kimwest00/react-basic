@@ -13,8 +13,10 @@
 	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script type = "text/babel">
-        function Btn({text}){
-            return <button style={{
+        function Btn({text,onClick}){
+            return <button 
+            onClick = {onClick}
+            style={{
                 backgroundColor : "tomato",
                 color:"white",
                 padding: "10px 20px",
