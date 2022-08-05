@@ -13,9 +13,9 @@
 	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script type = "text/babel">
-        function Btn({text,onClick}){
+        function Btn({text,changeValue}){
             return <button 
-            onClick = {onClick}
+            onClick = {changeValue}
             style={{
                 backgroundColor : "tomato",
                 color:"white",
@@ -24,14 +24,14 @@
                 borderRadius:10,
             }}>{text}</button>;
         }
-       
+        const MemorizedBtn = React.memo(Btn);
         function App(){
             const [value,setValue] = React.useState("Save Changes");
             const changeValue = ()=>setValue("Revert Change");
             return(
 			<div>
-                <Btn text ={value} onClick ={changeValue}/>
-                <Btn text ="Continue"/>
+                <MemorizedBtn text ={value} changeValue ={changeValue}/>
+                <MemorizedBtn text ="Continue"/>
             </div>
 			);
         }
